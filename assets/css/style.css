@@ -1,0 +1,32 @@
+body{
+    background-image: url("../images/");
+}
+h1{
+    background-color: lightblue;
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+#gameScreen{
+    background-color: salmon;
+    border: solid 2px black;
+    width: 600px;
+    box-sizing: border-box;
+    overflow: auto;
+    margin:0 auto;
+    
+}
+#startBtn {
+    color:black;
+    background-color: red;
+    border:solid 2px;
+
+}
+li{
+    display: inline;
+    text-align: center;
+}
+ul{
+    text-align: center;
+}
