@@ -5,24 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
+    
 </head>
 <body>
+    <div id="startScreen">
+            <button id="startBtn">Start</button>
+    </div>
     <div id="gameScreen">
         <h1>Garden Trivia</h1>
-        <button id="startBtn">Start</button>
-        <span id="timer"> You have </span>
-        <div id="quest1">
-            <ul>what is the question? <br>
-                <li>true</li>
-                <li>false</li>
-            </ul>
-        </div>
-        <div id="quest2"></div>
-        <div id="quest3"></div>
-        <button id="doneBtn">Done</button>
+        <span id="timer"></span>
+            <div id="questions">
+                <div class="form-check form-check-inline">
+                    <p>Bulls run towards the color red</p>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">True</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">False</label>
+                      </div>
+            </div>
+            <div id="quest2"> S.O.S. stands for "Save our Ship"<br>
+                <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline3">True</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline4">False</label>
+                      </div>
+            </div>
+            <div id="quest3"> Marco Polo discovered pasta in China and brought it back to Italy<br>
+                <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline5" name="customRadioInline5" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline5">True</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline6" name="customRadioInline5" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline6">False</label>
+                      </div> 
+             </div>
+            <div id="quest4"> Key West is the westernmost Florida key <br>
+                <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline7" name="customRadioInline7" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline7">True</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline8" name="customRadioInline7" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline8">False</label>
+                      </div>
+            </div>
+             <div id="quest5"> Icebergs are composed of frozen sea water<br>
+                <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline9" name="customRadioInline9" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline9">True</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline10" name="customRadioInline9" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline10">False</label>
+                      </div>
+                      
+             </div>
+             <button id="doneBtn">Done</button>
     </div>
-  
+
+   <div id="finalScreen">
+       <h2>You are Done</h2>
+    <button id="resetBtn">Start over</button>
+   </div>
 </body>
 </html>
