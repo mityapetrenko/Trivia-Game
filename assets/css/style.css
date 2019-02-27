@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/");
+    background-image: url("../images/board-chalk-chalkboard-459793.jpg");
 }
 h1{
     background-color: lightblue;
@@ -65,9 +65,20 @@ h1{
 
 }
 #finalScreen{
+    background-color: salmon;
     border: solid 2px black;
     width: 600px;
     height:400px;
     box-sizing: border-box;
     margin:0 auto;
+    text-align: center;
+    padding-top:20px;
+}
+#resetBtn{
+    color:black;
+    background-color: red;
+    border:solid 2px;
+    width:100px;
+    height:50px;
+
 }

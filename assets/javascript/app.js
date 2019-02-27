@@ -1,7 +1,4 @@
 
-// start screen shows up first in the dom, once user presses start button(on click) the gameScreen shows up
-//game screen will have all the questions
-// need to setup timeout for 30 sec
 // users select true or false
 //if statements to determine correct or incorrect answer
 // three ways to end the game----
@@ -12,7 +9,6 @@
 //answers, will need to display right answers as well.
 // done button at the end of the screen will end the game. game end screen/function will run. display counter right/wring
 //answers. unanswered questions
-//after start button is hit run function to display the questions and the timer
 $( document ).ready(function(){
     var timer=60;
     var correctAns=0;
@@ -33,10 +29,10 @@ $( document ).ready(function(){
  $("#resetBtn").hide();
 
 $("#startBtn").on("click",function(){
- $("#gameScreen").show();
+ newGame();
  $("#startScreen").hide();
  $("#resetBtn").hide();
- newGame();
+ 
 });
 
 $("#doneBtn").on("click",function(){
@@ -44,6 +40,8 @@ $("#doneBtn").on("click",function(){
     $("#gameScreen").hide();
     $("#doneBtn").hide();
     $("#resetBtn").show();
+    stop();
+    reset();
 });
 $("#resetBtn").on("click",function(){
     $("#startScreen").show();
@@ -56,6 +54,7 @@ function reset(){
     correctAns=0;
     incorrectAns=0;
     unanswered=0;
+    timer=60;
 
    
 
@@ -80,7 +79,7 @@ function answers(){
 };
 function runTimer(){
 	if (!running) {
-	intervalId = setInterval(decrement, 1000); 
+	intervalId = setInterval(decrement, 0); 
 	running = true;
 	}
 }
