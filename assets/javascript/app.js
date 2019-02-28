@@ -4,22 +4,20 @@
 // three ways to end the game----
 //end of the game function/out of time function/done button
 //end of the game: scores are totalled, questions are totalled, 
-// clear timeout????
-// reset function will clear timeout and set it to 30 seconds again. a counter will keep track of right answers/wrong 
+// reset function will clear timeout and set it to 60 seconds again. a counter will keep track of right answers/wrong 
 //answers, will need to display right answers as well.
 // done button at the end of the screen will end the game. game end screen/function will run. display counter right/wring
 //answers. unanswered questions
+//make an array of user response and compare it to correct answers'
 $( document ).ready(function(){
     var timer=60;
     var correctAns=0;
     var incorrectAns=0;
     var unanswered=0;
-    var question=[{
-        question:$("#quest1"),
-        answer: val="option2",
-    }];
+    var userChoice=[];
+    var answers=["option2", "option2","option2","option2","option2"];
     var running = false;
-    console.log(question[0].question);
+    
 
     
  $("#startScreen").show();
@@ -59,6 +57,27 @@ function reset(){
    
 
 }
+
+$("input[type='radio']"). click(function(){
+    var radioValue = $("input[name='inlineRadioOptions']:checked"). val();
+    if(radioValue){
+        userChoice.push(radioValue);
+    }
+    return userChoice; 
+    console.log(radioValue);
+    });
+    for(var i=0; i<answers.length; i++){
+        return i;
+    }
+    for(var j=0; j<userChoice.length; j++){
+        return j;
+        if(i===j){
+            alert( "you got it right");
+            correctAns++;
+        }else {
+            incorrectAns++;
+        }
+    };
 function newGame(){
     correctAns = 0;
     incorrectAns = 0;
@@ -68,18 +87,10 @@ function newGame(){
     $("#doneBtn").show();
 
 }
-function answers(){
-    if (question.answer === $("input[name='customRadioInline1']:checked").val()){
-        alert("yay");
-        correctAns++;
-    }
-    else{
-        incorrectAns++;
-    } 
-};
+
 function runTimer(){
 	if (!running) {
-	intervalId = setInterval(decrement, 0); 
+	intervalId = setInterval(decrement, 1000); 
 	running = true;
 	}
 }
